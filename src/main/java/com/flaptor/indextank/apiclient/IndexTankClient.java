@@ -211,7 +211,7 @@ public class IndexTankClient implements ApiClient {
         /**
          * unique identifier
          */
-        private String id;
+        private final String id;
 
         /**
          * fields
@@ -258,6 +258,10 @@ public class IndexTankClient implements ApiClient {
             this.fields = fields;
             this.variables = variables;
             this.categories = categories;
+        }
+        
+        public String getId() {
+            return id;
         }
 
     }
