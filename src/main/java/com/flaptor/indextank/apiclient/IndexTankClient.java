@@ -630,6 +630,9 @@ public class IndexTankClient implements ApiClient {
                     "Basic " + Base64.encodeBytes(privatePass.getBytes()));
         }
         urlConnection.setRequestMethod(method);
+        // todo - add timeout so it doesn't hang forever
+        //urlConnection.setConnectTimeout(60000);
+        //urlConnection.setReadTimeout(60000);
 
         if (method.equals(PUT_METHOD) && data != null) {
             // write
